@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: var(--font-atkinson);
+  font-family: var(--font-opensans);
 }
 
 main {
@@ -20,6 +20,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: var(--font-urbanist);
   margin: 0 0 0.5rem 0;
   line-height: 1.2;
 }
