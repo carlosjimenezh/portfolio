@@ -2,6 +2,8 @@
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+import SocialLinks from '../components/SocialLinks.astro';
+import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 ---
 
@@ -13,27 +15,109 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 	<body>
 		<Header />
 		<main>
-      <section>
-        <div class="grid g-2">
-          <div>
-            <h1><span>I'm </span><br> Carlos E. Jiménez Hdez</h1>
-            <p>
-              Thank you for taking the time to learn about my experience as a <strong>Web App Developer</strong>.
-            </p>
-            <p>
-              I look forward to hearing from you. Have a great day.
-            </p>
-            <a href="#">Download CV</a>
-          </div>
-          <div>
-            image
-          </div>
+      <section id="hero">
+        <div>
+          <SocialLinks></SocialLinks>
+          <h1><span>I'm </span><br> Carlos E. Jiménez Hdez</h1>
+          <p>
+            Thank you for taking the time to learn about my experience as a <strong>Web App Developer</strong>.
+            <br>
+            I look forward to hearing from you. Have a great day.
+          </p>
+          <a href="#" class="btn">Download Resume</a>
         </div>
       </section>
       <section>
         <h2 class="text-center">Proffesional Experience</h2>
+        <ul>
+          <li>
+            <div class="flex space-between">
+              <p><strong>Full Stack Developer</strong> <br> <b>Crateronfire</b></p>
+              <p><b>2022 - 2026</b></p>
+            </div>
+            Developed and maintained web applications focused on business process automation and <b>e-commerce</b>. Designed and implemented <b>responsive</b> user interfaces, developed <b>backend functionality</b>, consumed and integrated <b>REST APIs</b>, and integrated <b>third-party services</b>.
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Projects</h2>
+        <div class="grid g-2 project">
+          <img src={AboutHeroImage.src} alt="">
+          <div class="info">
+            <h3>Café Cien | E-commerce</h3>
+            <b>2025</b>
+            <ul class="tags flex">
+              <li>PHP</li> 
+              <li>MYSQL</li>
+              <li>JS</li>
+            </ul>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure vero illo quisquam tempora quas, amet non nobis quae delectus voluptatum vitae, necessitatibus dolor ipsa dignissimos consectetur et voluptatibus ullam aliquam.</p>
+            <a href="#" target="_blank" class="btn">Visit Website</a>
+          </div>
+        </div>
+      </section>
+      <section class="text-center">
+        <h2>Have a project in mind?</h2>
+        <a href="#" class="btn">
+          <strong>Get in Touch</strong>
+        </a>
       </section>
 		</main>
 		<Footer />
 	</body>
 </html>
+
+<style>
+.grid.project {
+  grid-template-columns: 0.4fr 0.6fr;
+  gap: 0
+}
+.info {
+  padding: 10px;
+}
+.info h3 {
+  margin-bottom: 0;
+}
+ul.tags {
+  list-style: none;
+  padding-inline-start: 0;
+  margin-block-start: 0;
+  gap: 10px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 10px 0 20px;
+}
+ul.tags li {
+  border: 2px solid #333;
+  color: #333;
+  text-align: center;
+  padding: 3px 5px;
+  font-size: 0.8em;
+  border-radius: 5px;
+  font-weight: 700;
+  min-width: 50px;
+}
+ul {
+  max-width: 600px;
+  margin: auto;
+}
+</style>
+
+<style is:global>
+	@media (min-width: 721px) {
+		#hero .social-links {
+			display: none!important;
+		}
+	}
+	@media (max-width: 720px) {
+		#hero .social-links {
+      justify-content: flex-start;
+		}
+    #hero .social-links a {
+      padding: 1em .2em;
+    }
+    #hero .social-links a:first-of-type {
+      padding-left: 0;
+    }
+	}
+</style>

@@ -21,7 +21,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font-urbanist);
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 1rem 0;
   line-height: 1.2;
 }
 
@@ -45,9 +45,12 @@ h5 {
   font-size: 1.25em;
 }
 
-strong,
-b {
+strong {
   font-weight: 700;
+}
+
+b {
+  font-weight: 600;
 }
 
 p {
@@ -101,6 +104,28 @@ hr {
   border: none;
 }
 
+a {
+  text-decoration: none;
+}
+
+a.btn {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 5px 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  font-weight: 600;
+  min-width: 200px;
+  transition: all 0.5s ease-in-out;
+}
+
+a.btn:hover {
+  background-color: #000;
+  box-shadow: 0 1px 10px rgb(0, 0, 0, 0.1);
+  transition: all 0.5s ease-in-out;
+}
+
 @media (max-width: 720px) {
   body {
     font-size: 18px;
@@ -131,11 +156,11 @@ hr {
 }
 
 section:not(:first-of-type) {
-  margin: 100px 0;
+  margin: 200px 0;
 }
 
 section:first-of-type {
-	margin-top: 150px;
+  margin-top: 150px;
 }
 
 .relative {
@@ -259,6 +284,26 @@ section:first-of-type {
 @media screen and ((min-width: 600px) and (max-width: 950px)) {}
 
 @media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.7em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.22em;
+  }
+
+  h4 {
+    font-size: 1.15em;
+  }
+
+  h5 {
+    font-size: 1em;
+  }
+
   .grid {
     gap: 100px;
   }

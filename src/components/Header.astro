@@ -32,6 +32,7 @@ import SocialLinks from './SocialLinks.astro';
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
     max-width: 1300px;
   }
+
 	h2 {
 		margin: 0;
 		font-size: 1em;
@@ -52,12 +53,19 @@ import SocialLinks from './SocialLinks.astro';
 		border-bottom: 4px solid transparent;
 		text-decoration: none;
 	}
+
+  @media only screen and (max-width: 600px) {
+    nav a {
+      padding: 1em 0.2em;
+    }
+  }
+
 </style>
 
 <script>
   const header = document.querySelector('header');
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
+    if (window.scrollY > 50) {
       header?.classList.add('scrolled')
     } else {
       header?.classList.remove('scrolled')
