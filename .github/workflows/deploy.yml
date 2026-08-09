@@ -44,7 +44,7 @@ jobs:
       - name: 🪄 Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::TU_ACCOUNT_ID:role/deploy-portfolio
+          role-to-assume: arn:aws:iam::286879406269:role/deploy-portfolio
           aws-region: ${{ env.AWS_REGION }}
 
       - name: 📤 Sync dist to S3
