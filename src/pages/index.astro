@@ -3,7 +3,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import SocialLinks from '../components/SocialLinks.astro';
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
+import CafeCienImage from '../images/cafecien.png';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 ---
 
@@ -42,7 +42,9 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
       <section>
         <h2>Projects</h2>
         <div class="grid g-2 project">
-          <img src={AboutHeroImage.src} alt="">
+          <div class="img-wrapper relative">
+            <img src={CafeCienImage.src} alt="café cien" class="absolute">
+          </div>
           <div class="info">
             <h3>Café Cien | E-commerce</h3>
             <b>2025</b>
@@ -51,14 +53,14 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
               <li>MYSQL</li>
               <li>JS</li>
             </ul>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure vero illo quisquam tempora quas, amet non nobis quae delectus voluptatum vitae, necessitatibus dolor ipsa dignissimos consectetur et voluptatibus ullam aliquam.</p>
-            <a href="#" target="_blank" class="btn">Visit Website</a>
+            <p>Integrated design and development of an online store, from user interface and user experience to the implementation of e-commerce functionalities, server configuration, and production deployment.</p>
+            <a href="https://cafecien.shop/" target="_blank" class="btn">Visit Website</a>
           </div>
         </div>
       </section>
       <section class="text-center">
         <h2>Have a project in mind?</h2>
-        <a href="#" class="btn">
+        <a href="mailto:carlosejimenezh95@gmail.com" class="btn">
           <strong>Get in Touch</strong>
         </a>
       </section>
@@ -70,10 +72,10 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 <style>
 .grid.project {
   grid-template-columns: 0.4fr 0.6fr;
-  gap: 0
+  gap: 20px
 }
-.info {
-  padding: 10px;
+.project .img-wrapper img {
+  object-position: left top;
 }
 .info h3 {
   margin-bottom: 0;
@@ -108,6 +110,10 @@ ul {
 		#hero .social-links {
 			display: none!important;
 		}
+    #hero {
+      margin-top: 250px;
+    }
+    
 	}
 	@media (max-width: 720px) {
 		#hero .social-links {
@@ -118,6 +124,9 @@ ul {
     }
     #hero .social-links a:first-of-type {
       padding-left: 0;
+    }
+    .project .img-wrapper img {
+      position: relative!important;
     }
 	}
 </style>

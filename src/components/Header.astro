@@ -9,7 +9,7 @@ import SocialLinks from './SocialLinks.astro';
 		<h2><a href="/">{SITE_TITLE}</a></h2>
 		<div class="internal-links">
 			<HeaderLink href="/">Hello</HeaderLink>
-			<HeaderLink href="/blog">Blog</HeaderLink>
+			<!-- <HeaderLink href="/blog">Blog</HeaderLink> -->
 			<HeaderLink href="/about">About</HeaderLink>
 		</div>
     <SocialLinks></SocialLinks>
@@ -20,7 +20,8 @@ import SocialLinks from './SocialLinks.astro';
     position: fixed;
     top: 0;
     transition: all 0.4s ease-in-out;
-    width: 100%
+    width: 100%;
+    z-index: 99;
 	}
   header.scrolled {
     box-shadow: 0 1px 10px rgb(0, 0, 0, 0.1);
